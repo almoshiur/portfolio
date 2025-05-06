@@ -1,697 +1,1311 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <title>Md Al Moshiur Chowdhary - Personal Portfolio</title>
-      <!--GOOGLE FONT -->
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-      <!--BOOTSTRAP MAIN STYLES -->
-      <link href="assets/css/bootstrap.css" rel="stylesheet" />
-      <!--FONTAWESOME MAIN STYLE -->
-      <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
-      <!--CUSTOM STYLE -->
-      <link href="assets/css/style.css" rel="stylesheet" />
-   </head>
-   <body>
-      <!-- NAV SECTION -->
-      <div class="navbar navbar-inverse navbar-fixed-top">
-         <div class="container">
-            <div class="navbar-header">
-               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               </button>
-               <a class="navbar-brand" href="#">Md Al Moshiur Chowdhary</a>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Professional portfolio of Md Al Moshiur Chowdhary - Network Engineer & Cybersecurity Specialist">
+    <meta name="author" content="Md Al Moshiur Chowdhary">
+    <title>Md Al Moshiur Chowdhary - Network & Security Expert</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            background-color: rgba(44, 62, 80, 0.95) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            padding: 15px 0;
+        }
+        
+        .navbar.scrolled {
+            padding: 10px 0;
+            background-color: var(--secondary-color) !important;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white !important;
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        #header-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #header-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80') center/cover;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        #header-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        #header-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        #header-section h3 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+        
+        .down-icon {
+            color: white;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .down-icon:hover {
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            bottom: -10px;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        /* About Section */
+        #about-section {
+            background-color: white;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-color);
+            color: white !important;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        /* Experience Section */
+        #wexp-section {
+            background-color: var(--light-color);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::after {
+            right: -12px;
+        }
+        
+        .right::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .timeline-date {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        /* Skills Section */
+        .skill-item {
+            margin-bottom: 30px;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 5px;
+            transition: width 1.5s ease;
+        }
+        
+        /* Contact Section */
+        #contact-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--dark-color) 100%);
+            color: white;
+        }
+        
+        .contact-info {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .contact-info:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        /* Footer */
+        #footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 18px;
+            }
+            
+            .left::after, .right::after {
+                left: 18px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+        }
+        
+        /* Animation Classes */
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        
+        .shadow-hover {
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .shadow-hover:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+        }
+        
+        /* Particle JS Background */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .particles-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MD AL MOSHIUR CHOWDHARY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#wexp-section">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education-section">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills-section">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#project-section">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+                </ul>
             </div>
-            <div class="navbar-collapse collapse">
-               <ul class="nav navbar-nav navbar-right">
-                  <!--<li><a href="#header-section">HOME</a></li>-->
-                  <li><a href="#about-section">ABOUT</a></li>
-                  <li><a href="#wexp-section">EXPERIENCE</a></li>
-                  <li><a href="#education-section">EDUCATION</a></li>
-                  <li><a href="#project-section">RESEARCH & PROJECTS</a></li>
-                  <li><a href="#award-section">AWARDS & OTHERS</a></li>
-                  <!--<li><a href="#contact-section">OTHERS</a></li>-->
-                  <li><a href="#contact-section">CONTACT</a></li>
-               </ul>
-            </div>
-         </div>
-      </div>
-      <!--END NAV SECTION -->
-      <!-- HEADER SECTION -->
-      <div id="header-section">
-         <div class="container">
-            <div class="row centered">
-               <div class="col-md-8 col-md-offset-2">
-                  <br><br><br><br><br><br><br><br>
-                  <h1 style="font-size: 3.5em; color: black;"><strong>Md Al Moshiur Chowdhary</strong></h1>
-                  <!-- <h3>BSc in Computer Science and Engineering, University of Development Alternative<br/> MSc in Information Technology, Jahangirnagar University </h3>  -->
-                  <h3 style="font-size: 1.5em; color: black;">BSc in CSE</h3>
-                  <br />
-                  <a href="#about-section">  <i class="fa fa-angle-double-down fa-5x down-icon"></i> </a>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!--END HEADER SECTION -->
-      <!--ABOUT SECTION -->
-      <div id="about-section" >
-         <div class="container" >
-            <!--
-               <div class="row main-top-margin text-center">
-                   <div class="col-md-8 col-md-offset-2 " data-scrollreveal="enter top and move 100px, wait 0.3s">
-                       <h1>Who Am I ?</h1>
-                       <h4>
-                          A Computer Science and Engineering graduate from University of Development Alternative, Dhaka, Bangladesh. 
-               Currently enrolled in Master of Business Administration program at Institution of Business Administration, University of Dhaka, Bangladesh 
-               and MSc in Information Technology at Jahangirnagar University Bangladesh.
-                       </h4>
-                   </div>
-               </div>
-               -->
-            <!-- ./ Main Heading-->
-            <div class="row main-low-margin text-center">
-               <div class="col-md-3 " data-scrollreveal="enter left and move 100px, wait 0.4s">
-                  <img class="img-circle" src="assets/img/team/shahriar.jpg" alt="">
-                  <h4><strong>Md Al Moshiur Chowdhary</strong> </h4>
-                  <p>
-                     Principal Officer, JB PLC <br/> 
-                     Ex. Sr. Network Engineer(Intech Limited)
-                  </p>
-                  <p>
-                     <a href="https://www.facebook.com/sysengron/"><i class="fa fa-facebook-square fa-2x color-facebook"></i></a>
-                     <a href="https://www.twitter.com/"><i class="fa fa-twitter-square fa-2x color-twitter"></i></a>
-                     <!-- <a href="#"><i class="fa fa-google-plus-square fa-2x color-google-plus"></i></a> -->
-                     <a href="https://github.com/sysengron"><i class="fa fa-github-square fa-2x color-github"></i></a>
-                     <a href="https://www.linkedin.com/in/amchowdhary/"><i class="fa fa-linkedin-square fa-2x color-linkedin"></i></a>
-                     <!-- 
-                        <a href="#"><i class="fa fa-pinterest-square fa-2x color-pinterest"></i></a>
-                        <a href="#"><i class="fa fa-studocu-square fa-2x color-studocu"></i></a>
-                        -->
-                  </p>
-               </div>
-               <div class="col-md-7 col-sm-7 col-md-offset-1  text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
-                  <h3>About Myself</h3>
-                  <!-- <p>
-                     After completing my graduation in Computer Science and Engineering (CSE) from Khulna University of Engineering & Technology (KUET), I started my career as a <b>Lecturer</b> of <b>CSE</b> at <b>Daffodil International University (DIU)</b>, gave my best to taught my students and make them learn from the core. Later on joined as an <b>Assistant Network Engineer (ANE)</b> at <b>Janata Bank Limited (JBL)</b> and working till date. Also enrolled myself in Master of Business Administration (MBA) program of Institute of Business Administration, University of Dhaka (IBA-DU) with a view to add managerial skills along with my technical knowledge. Recently I have also enrolled myself to the M.Sc. Engineering program of Bangladesh University of Engineering & Technology (BUET) to get myself up-to-date with the domain of Computer Science. 
-                     </p> -->
-                  <p>
-                     Upon attaining a degree in Computer Science and Engineering (CSE) from the University of Development Alternative (UODA), I commenced my professional journey as a <b>Network Engineer</b> at <b>Intech Limited</b>, a distinguished Internet Service Provider (ISP) in Bangladesh, to enhance my career prospects. Subsequently, I transitioned to <b>Janata Bank PLC</b>, where I initially held the position of Executive Officer - Assistant Hardware and Maintenance Engineer (AHME). Throughout my tenure, I have been fortunate to advance within the organization, culminating in my current role as <b>Principal Officer</b>.
-                  </p>
-                  <p>
-                     I possess a deep passion for advanced networking and cybersecurity, with a keen interest in various domains within computer science and research, particularly state-of-the-art cyber systems and networking. I consider myself a capable individual who is eager to assume responsibilities and diligently complete assigned tasks, always striving to deliver my utmost best. 
-                  </p>
-<p>
-    My strong interest in academic pursuits and dedication to research has inspired me to actively seek enrollment in a <b> Master's program </b>. I am eager to delve deeper into the intricacies of Computer Networks and Cybersecurity, aiming to contribute meaningfully to these fields through advanced study and exploration of emerging opportunities.
-</p>
+        </div>
+    </nav>
 
-		       
-               </div>
+    <!-- Hero Section -->
+    <section id="header-section" class="d-flex align-items-center">
+        <div id="particles-js"></div>
+        <div class="container particles-content text-center">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="animate__animated animate__fadeInDown">Md Al Moshiur Chowdhary</h1>
+                <h3 class="animate__animated animate__fadeInDown animate__delay-1s">Network & Cybersecurity Enthusiast</h3>
+                <div class="mt-4 animate__animated animate__fadeIn animate__delay-2s">
+                    <a href="#about-section" class="btn btn-primary btn-lg me-2">Explore My Work</a>
+                    <a href="#contact-section" class="btn btn-outline-light btn-lg">Contact Me</a>
+                </div>
+                <a href="#about-section" class="d-block mt-5 animate__animated animate__fadeIn animate__delay-3s">
+                    <i class="fas fa-chevron-down fa-3x down-icon"></i>
+                </a>
             </div>
-            <!-- ./ Row Content-->
-         </div>
-      </div>
-      <!-- END ABOUT SECTION -->
-      <!--
-         <div id="products-section" >
-             <div class="container" >
-                 <div class="row main-top-margin text-center" data-scrollreveal="enter top and move 100px, wait 0.3s">
-                     <div class="col-md-8 col-md-offset-2 ">
-                         <h1>Work Experience</h1>
-                             <h4>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                              Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                         </h4> 
-                     </div>
-                 </div>
-                   ./ Main Heading
-                 <hr />
-         
-                 <div class="row main-low-margin" >
-                     <div class="col-md-10  col-md-offset-1 ">
-                         <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.8s">
-                             <img src="assets/img/product/prd1.png" alt="">
-                         </div>
-                         <div class="col-md-8 " data-scrollreveal="enter right and move 100px, wait 0.4s">
-                             <h4 >  <strong class="color-red">Client Portfolio No # 1 </strong></h4>
-                             <p>
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                             </p>
-                             <p>
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                             </p>
-                             <p>
-                                 <i class="fa fa-check"></i> Responsive Design<br />
-                                 <i class="fa fa-check"></i> 24x7 Support <br />
-                                 <i class="fa fa-check"></i> Well Documented<br />
-                             </p>
-                             
-                             <a href="#" class="btn btn-success" >See Live Demo</a>
-                         </div>
-                     </div>  
-                 </div>
-                  ./ Row Content
-         
-                 <hr />
-                 
-                 <div class="row main-low-margin bottam-pad" >
-         
-                     <div class="col-md-10  col-md-offset-1 ">
-                         <div class="col-md-8 " data-scrollreveal="enter left and move 100px, wait 0.4s">
-                             <h4 >  <strong class="color-red">Client  Portfolio No # 2 </strong></h4>
-                             <p>
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                             </p>
-                             <p>
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                             </p>
-                             <p>
-                                 <i class="fa fa-check"></i> Responsive Design<br />
-                                 <i class="fa fa-check"></i> 24x7 Support <br />
-                                 <i class="fa fa-check"></i> Well Documented<br />
-                             </p>
-                             <a href="#" class="btn btn-danger" > See Live Demo</a>
-                         </div>
-                         
-                         <div class="col-md-4 " data-scrollreveal="enter right and move 100px, wait 0.4s">
-                             <img class="img-margin-product" src="assets/img/product/prd1.png" alt="">
-                         </div>
-                     </div>
-                 </div>
-                    ./ Row Content
-             </div>
-         </div>
-         -->
-      <!--WORK/PRODUCTS SECTION -->
-      <div id="wexp-section" >
-         <div class="container" >
-            <div class="row main-top-margin text-center" data-scrollreveal="enter top and move 100px, wait 0.3s">
-               <div class="col-md-8 col-md-offset-2 ">
-                  <h1>Experience</h1>
-                  <!--<h4>
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                       Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                     </h4> -->
-               </div>
-            </div>
-            <!-- ./ Main Heading-->
-            <hr />
-            <div class="row main-low-margin" >
-               <div class="col-md-10  col-md-offset-1 ">
-                  <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.8s">
-                     <img src="assets/img/product/jb-logo.jpg" width="150" height="120" alt="">
-                  </div>
-                  <div class="col-md-8 text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
-                     <h4 >  <strong class="color-red">Janata Bank Limited</strong></h4>
-                     <p>
-                        Principal Officer | July, 2012 – Current 
-                     </p>
-                     <p>
-                        <b>Job Responsibility:</b> Network Design and Implementation
-                        Technical Research and Evaluation
-                        Security Infrastructure Management (CISCO NGFW, Fortinet Firewall/Analyzer/Manager & ADC)
-                        DDOS Prevention and Network Continuity
-                        Configuration and Support (Cisco ASR, Nexus, Remote firewall, Cisco and Mikrotik Routers, Switches)
-                        Network Monitoring and Authorization Control
-                        Infrastructure Setup and Maintenance (KVM, rack installation, IP-PDU setup, ODF, patching, cabling)
-                        Bandwidth Management
-                        Procurement and Vendor Management
-                        IT Policies and Training Implementation
-                        .
-                     </p>
-                     <!--
-                        <p>
-                            <i class="fa fa-check"></i> Responsive Design<br />
-                            <i class="fa fa-check"></i> 24x7 Support <br />
-                            <i class="fa fa-check"></i> Well Documented<br />
-                        </p>
-                        
-                        <a href="#" class="btn btn-success" >See Live Demo</a>
-                        -->
-                  </div>
-               </div>
-            </div>
-            <!-- ./ Row Content-->
-            <hr />
-            <div class="row main-low-margin bottam-pad" >
-               <div class="col-md-10  col-md-offset-1 ">
-                  <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.8s">
-                     <img src="assets/img/product/daffodil-logo.png" width="150" height="150" alt="">
-                  </div>
-                  <div class="col-md-8 text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
-                     <!--<div class="col-md-8 " data-scrollreveal="enter left and move 100px, wait 0.4s">-->
-                     <h4 >  <strong class="color-red">Intech Limited</strong></h4>
-                     <p>
-                        Senior Network Engineer | January 2010 – July 2012
-                     </p>
-                     <p>
-                        <b>Job Responsibility:</b> Network Management (Local and Wide Area Networks)
-                        Diagnostics and Preventative Maintenance
-                        Supervision and Leadership
-                        Connectivity Troubleshooting
-                        ISP Infrastructure Backbone Support
-                        OLT-ONU Network Management
-                        CISCO Switch and Router Configuration (VLAN, VTP, STP, Protocols, ACL, GRE, IPSec, VPN, BGP)
-                        Mikrotik Router Configuration
-                        Network Performance Monitoring
-                        Hardware and Software Troubleshooting and Repair
-                        Installation and Configuration of Network Hardware and Software
-                        <br/> 
-                     </p>
-                     <!--<p>
-                        <i class="fa fa-check"></i> Responsive Design<br />
-                        <i class="fa fa-check"></i> 24x7 Support <br />
-                        <i class="fa fa-check"></i> Well Documented<br />
-                        </p>
-                        <a href="#" class="btn btn-danger" > See Live Demo</a>-->
-                  </div>
-                  <!--
-                     <div class="col-md-4 " data-scrollreveal="enter right and move 100px, wait 0.4s">
-                         <img class="img-margin-product" src="assets/img/product/daffodil-logo.png" width="400" height="400" alt="">
-                     </div>-->
-               </div>
-            </div>
-            <!-- ./ Row Content-->
-         </div>
-      </div>
-      <!--END WORK/PRODUCTS SECTION -->
-      <!--EDUCATION SECTION -->
-      <div id="education-section" >
-         <div class="container" >
-            <div class="row main-top-margin text-center" data-scrollreveal="enter top and move 100px, wait 0.3s">
-               <div class="col-md-8 col-md-offset-2 ">
-                  <h1>Education</h1>
-                  
-               </div>
-            </div>
-            <!-- ./ Main Heading-->
-            <hr />
-            <!--               
-           
-            <div class="row main-low-margin" >
-               <div class="col-md-10  col-md-offset-1 ">
-                  <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.8s">
-                     <img src="assets/img/product/JUNIV.png" width="150" height="150" alt="">
-                  </div>
-                  <div class="col-md-8 text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section" class="section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center" data-aos="fade-right">
+                    <img src="assets/img/team/rony.jpg" alt="Profile Image" class="profile-img img-fluid mb-4">
+                    <h3>Md Al Moshiur Chowdhary</h3>
+                    <p class="text-muted">Principal Officer, JB PLC</p>
+                    <div class="social-icons mt-3">
+                        <a href="https://www.facebook.com/sysengron/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/sysengron" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/amchowdhary/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <h3 class="mb-4">Network & Security Professional</h3>
+                    <p class="lead">With over 14 years of experience in designing, securing, and managing large-scale networks for major organizations.</p>
                     
-                     <h4 >  <strong class="color-red">Jahangirnagar University </strong></h4>
-                     <p>
-                        M.Sc. in Information Technology | 2018
-                     </p>
-                     <p>
-                        <b>CGPA: 3.15</b> out of <b>4.00</b> 
-                     </p>
-                     <p>
-                        <b>Key Courses:</b> Advanced Database Management Systems, Information System Ethics and Cyber Law, Data Mining and Knowledge Discovery, Wireless Networks Management, Information Systems, E-Commerce and Web Security, Cloud and Mobile Computing, Information Coding, Advanced Networking and Internet Technology, Big Data Analysis.  
-                     </p>
-                  
-                  </div>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> CISCO</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Network Architecture</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Network Security</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Linux</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Ethical Hacking</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Threat Management</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p class="mt-4">I'm currently pursuing a Master's in IT – Networking and Services at Metropolia University of Applied Sciences (Finland), focusing on advanced networking, cybersecurity, and AI-driven security.</p>
+                    
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-primary me-2"><i class="fas fa-download me-2"></i>Download CV</a>
+                        <a href="#contact-section" class="btn btn-outline-primary">Hire Me</a>
+                    </div>
                 </div>
             </div>
-			
-			--> 
-            <div class="row main-low-margin" >
-               <div class="col-md-10  col-md-offset-1 ">
-                  <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.8s">
-                     <img src="assets/img/product/kuet-logo.png" width="150" height="150" alt="">
-                  </div>
-                  <div class="col-md-8 text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
-                     <!--<div class="col-md-8 " data-scrollreveal="enter left and move 100px, wait 0.4s">-->
-                     <h4 >  <strong class="color-red">University of Development Alternative (UODA) </strong></h4>
-                     <p>
-                        B.Sc. in Computer Science and Engineering | 2009
-                     </p>
-                     <p>
-                        <b>CGPA: 3.47</b> out of <b>4.00</b> 
-                     </p>
-                     <p>
-                        <b>Key Courses:</b> Computer Basics and Programming, Discrete Mathematics, Structured Programming, Digital Logic Design, Object Oriented Programming, Computer Architecture, Data Structures, Algorithm Analysis & Design, Database Systems, Software Engineering, Operating Systems, Compiler Design, Computer Networks, Computer and Network Security, Data Mining, Artificial Intelligence, Machine Learning, Computer Graphics, Digital System Design. 
-                     </p>
-
-                  </div>
-                  
-               </div>
-            </div>
-            <hr />
-            <div class="row main-low-margin" >
-               <div class="col-md-10  col-md-offset-1 ">
-                  <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.8s">
-                     <img src="assets/img/product/rajuk-logo.png" width="150" height="150" alt="">
-                  </div>
-                  <div class="col-md-8 text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
-                     <!--<div class="col-md-8 " data-scrollreveal="enter left and move 100px, wait 0.4s">-->
-                     <h4 >  <strong class="color-red">Bangladesh Rifles College</strong></h4>
-                     <p>
-                        Higher Secondary Certificate | Science | 2004
-                        Board of Intermediate and Secondary Education, Dhaka [ 2004]
-                     </p>
-                     <p>
-                        <b>GPA: 3.40</b> out of <b>5.00</b>
-                     </p>
-                  </div>
-                  <!--
-                     <div class="col-md-4 " data-scrollreveal="enter right and move 100px, wait 0.4s">
-                         <img class="img-margin-product" src="assets/img/product/daffodil-logo.png" width="400" height="400" alt="">
-                     </div>-->
-               </div>
-            </div>
-            <hr />
-            <div class="row main-low-margin bottam-pad" >
-               <div class="col-md-10  col-md-offset-1 ">
-                  <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.8s">
-                     <img src="assets/img/product/qcps.jfif" width="150" height="150" alt="">
-                  </div>
-                  <div class="col-md-8 text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
-                     <!--<div class="col-md-8 " data-scrollreveal="enter left and move 100px, wait 0.4s">-->
-                     <h4 >  <strong class="color-red">Obayed Ullah Memorial High School</strong></h4>
-                     <p>
-                        Secondary School Certificate | Science | 2013
-                     </p>
-                     <p>
-                        <b>GPA: 3.38</b> out of <b>5.00</b>
-                     </p>
-                  </div>
-               </div>
-            </div>
-            <div class="row main-low-margin" >
-               <div class="col-md-10  col-md-offset-1 ">
-                  <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.2s">
-                     <h2 >  <strong class="color-blue">Educational Credential Evaluation</strong></h2>
-                  </div>
-                  <div class="col-md-8 text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
-                     <h4 >  <strong class="color-red">Course by Course </strong></h4>
-                     <p>
-                        World Education Services(WES), Ref# 4620970
-                     </p>
-                     <hr/>
-                     <h4 >  <strong class="color-red">Document by Document</strong></h4>
-                     <p>
-                        World Education Services(WES), Ref# 4122304
-                     </p>
-                  </div>
-               </div>
-            </div>
-            <!-- ./ Row Content-->
-            <!-- ./ Row Content-->
-         </div>
-      </div>
-      <!--END EDUCATION SECTION -->
-      <!--PROJECT SECTION -->
-      <div id="project-section" >
-         <div class="container" >
-            <div class="row main-top-margin text-center" data-scrollreveal="enter top and move 100px, wait 0.3s">
-               <div class="col-md-8 col-md-offset-2 ">
-                  <h1>Research & Projects</h1>
-                  <!--<h4>
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                       Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                     </h4> -->
-               </div>
-            </div>
-            <!-- ./ Main Heading-->
-            <hr />
-            <div class="row main-low-margin" >
-               <div class="col-md-10  col-md-offset-1 ">
-                  <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.2s">
-                     <h2 >  <strong class="color-blue">Area of Interest</strong></h2>
-                  </div>
-                  <div class="col-md-8 text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
-                     <p>
-                     <p><i class="fa fa-check"></i> Computer Networks</p>
-                     <p><i class="fa fa-check"></i> Cyber Security</p>
-                     <p><i class="fa fa-check"></i> Unix Programming</p>
-                     <p><i class="fa fa-check"></i> Applied Cryptography</p>
-                     <p><i class="fa fa-check"></i> Computer Graphics</p>
-                     </p>    
-                  </div>
-               </div>
-            </div>
-            <!-- ./ Row Content-->
-            <hr />
-            <div class="row main-low-margin" >
-               <div class="col-md-10  col-md-offset-1 ">
-                  <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.2s">
-                     <h2 >  <strong class="color-blue">Membership</strong></h2>
-                  </div>
-                  <div class="col-md-8 text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
-                     <h4 >  <strong class="color-red">Information Systems Professional (ISP)</strong></h4>
-                     <p>
-                        Member 6185
-                     </p>
-                     <hr/>
-                     <h4 >  <strong class="color-red">Bangladesh Computer Society</strong></h4>
-                     <p>
-                        Member 02435
-                     </p>
-                  </div>
-               </div>
-            </div>
-            <!-- ./ Row Content-->
-            <hr />
-<div class="row main-low-margin bottam-pad">
-    <div class="col-md-10 col-md-offset-1">
-        <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.2s">
-            <h2><strong class="color-blue">Projects</strong></h2>
         </div>
-        <div class="col-md-8 text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
-            <h4><strong class="color-red">Support End User by Wi-Fi Network</strong></h4>
-            <p>
-                Implemented a Wi-Fi network solution utilizing Wi-Fi 802.11 b standards, supported by Windows Server for authentication and management. Developed batch scripts for automated tasks and utilized various Windows and networking tools for troubleshooting and optimization.
-            </p>
-            <p>
-                This project aimed to enhance end-user experience by providing reliable and efficient Wi-Fi connectivity, ensuring seamless access to network resources.
-            </p>
-            <hr/>
-            <h4><strong class="color-red">Server and Network Management Interface</strong></h4>
-            <p>
-                Developed a comprehensive server and network management interface using Red Hat Enterprise Linux (RHEL), Elastic for ipphone service, PHP MySQL for dynamic content generation and database management, and Shell Script for automation and task scheduling.
-            </p>
-            <p>
-                Integrated Nagios for network monitoring and EVE-NG for network emulation and visualization. Configured and managed MikroTik and Cisco routers, as well as firewalls, to ensure network security and performance.
-            </p>
-            <p>
-                This project focused on providing a centralized platform for efficient management and monitoring of servers and network infrastructure, enhancing reliability and scalability.
-            </p>
-            <hr/>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="wexp-section" class="section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Professional Experience</h2>
+            
+            <div class="timeline">
+                <!-- Janata Bank -->
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-content shadow-hover hover-scale">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/img/product/jb-logo.jpg" alt="Janata Bank" class="me-3" width="60">
+                            <div>
+                                <h4 class="mb-0">Janata Bank PLC</h4>
+                                <p class="text-muted mb-0">Principal Officer - ICT Division</p>
+                            </div>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar-alt me-2"></i>July 2012 - Present</span>
+                        <ul class="mt-3">
+                            <li>Design and implement secure network architectures for 1000+ branch banking network</li>
+                            <li>Manage security infrastructure including Cisco NGFW, Fortinet Firewalls, and ADCs</li>
+                            <li>Lead DDoS prevention strategies ensuring 99.99% network uptime</li>
+                            <li>Configure and maintain Cisco ASR, Nexus, and Mikrotik network devices</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Getco -->
+                <div class="timeline-item right" data-aos="fade-left">
+                    <div class="timeline-content shadow-hover hover-scale">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/img/product/daffodil-logo.png" alt="Getco" class="me-3" width="60">
+                            <div>
+                                <h4 class="mb-0">Getco</h4>
+                                <p class="text-muted mb-0">Senior Network Engineer</p>
+                            </div>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar-alt me-2"></i>January 2010 - July 2012</span>
+                        <ul class="mt-3">
+                            <li>Managed local and wide area networks for a leading ISP in Bangladesh</li>
+                            <li>Configured Cisco switches and routers (VLAN, VTP, STP, ACL, GRE, IPSec VPN)</li>
+                            <li>Implemented Mikrotik router configurations for optimal network performance</li>
+                            <li>Troubleshot network connectivity issues with 95% resolution rate</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Metronet -->
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-content shadow-hover hover-scale">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/img/product/daffodil-logo.png" alt="Metronet" class="me-3" width="60">
+                            <div>
+                                <h4 class="mb-0">Metronet</h4>
+                                <p class="text-muted mb-0">Senior Network Engineer</p>
+                            </div>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar-alt me-2"></i>January 2010 - July 2012</span>
+                        <ul class="mt-3">
+                            <li>Managed local and wide area networks for a leading ISP in Bangladesh</li>
+                            <li>Configured Cisco switches and routers (VLAN, VTP, STP, ACL, GRE, IPSec VPN)</li>
+                            <li>Implemented Mikrotik router configurations for optimal network performance</li>
+                            <li>Troubleshot network connectivity issues with 95% resolution rate</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Intech Limited -->
+                <div class="timeline-item right" data-aos="fade-left">
+                    <div class="timeline-content shadow-hover hover-scale">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/img/product/daffodil-logo.png" alt="Intech Limited" class="me-3" width="60">
+                            <div>
+                                <h4 class="mb-0">Intech Limited</h4>
+                                <p class="text-muted mb-0">Senior Network Engineer</p>
+                            </div>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar-alt me-2"></i>January 2010 - July 2012</span>
+                        <ul class="mt-3">
+                            <li>Managed local and wide area networks for a leading ISP in Bangladesh</li>
+                            <li>Configured Cisco switches and routers (VLAN, VTP, STP, ACL, GRE, IPSec VPN)</li>
+                            <li>Implemented Mikrotik router configurations for optimal network performance</li>
+                            <li>Troubleshot network connectivity issues with 95% resolution rate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education-section" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Education</h2>
+            
+            <div class="row">
+                <!-- Metro -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/mp-logo.jpg" alt="Metro" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">Metropolia University of Applied Sciences</h4>
+                                    <p class="text-muted mb-0">MSc in Information Technology (Networking and Services)</p>
+                                </div>
+                            </div>
+                            <p><strong>Graduation:</strong> 2009</p>
+                            <p><strong>CGPA:</strong> 3.47/4.00</p>
+                            <hr>
+                            <h5>Key Courses:</h5>
+                            <ul>
+                                <li>Computer Networks</li>
+                                <li>Computer and Network Security</li>
+                                <li>Data Structures & Algorithms</li>
+                                <li>Operating Systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- JU -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/JU-logo.png" alt="JU" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">Jahangirnagar University</h4>
+                                    <p class="text-muted mb-0">M.Sc. in Information Technology</p>
+                                </div>
+                            </div>
+                            <p><strong>Graduation:</strong> Ongoing</p>
+                            <hr>
+                            <h5>Focus Areas:</h5>
+                            <ul>
+                                <li>Advanced Networking</li>
+                                <li>Cybersecurity</li>
+                                <li>Cloud Computing</li>
+                                <li>Artificial Intelligence</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- UODA -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/kuet-logo.png" alt="UODA" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">University of Development Alternative</h4>
+                                    <p class="text-muted mb-0">B.Sc. in Computer Science and Engineering</p>
+                                </div>
+                            </div>
+                            <p><strong>Graduation:</strong> 2009</p>
+                            <p><strong>CGPA:</strong> 3.47/4.00</p>
+                            <hr>
+                            <h5>Key Courses:</h5>
+                            <ul>
+                                <li>Database Systems</li>
+                                <li>Software Engineering</li>
+                                <li>Data Mining</li>
+                                <li>Machine Learning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Metropolia University -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/brc-logo.png" alt="Metropolia" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">Bangladesh Rifles College</h4>
+                                    <p class="text-muted mb-0">Higher Secondary Certificate</p>
+                                </div>
+                            </div>
+                            <p><strong>Graduation:</strong> 2004</p>
+                            <hr>
+                            <h5>Specialization:</h5>
+                            <ul>
+                                <li>Network Security</li>
+                                <li>Cloud Services</li>
+                                <li>AI-driven Security</li>
+                                <li>Advanced Routing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Metropolia University -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/oms-logo.jfif" alt="Metropolia" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">Obayed Ullah Memorial High School</h4>
+                                    <p class="text-muted mb-0">Secondary School Certificate</p>
+                                </div>
+                            </div>
+                            <p><strong>Graduation:</strong> 2004</p>
+                            <hr>
+                            <h5>Specialization:</h5>
+                            <ul>
+                                <li>Network Security</li>
+                                <li>Cloud Services</li>
+                                <li>AI-driven Security</li>
+                                <li>Advanced Routing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Metropolia University -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/wes.png" alt="Metropolia" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">Educational Credential Evaluation (ECA)</h4>
+                                    <p class="text-muted mb-0">World Education Services</p>
+                                    
+                                </div>
+                            </div>
+                            <hr>
+                            <ul>
+                                <li>Course-by-Course Educational Credential Evaluation, Ref. #4620970</li>
+                                <li>Document-by-Document Educational Credential Evaluation, Ref. #4122304</li>                             
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Metropolia University -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/ibb-logo.jpg" alt="Metropolia" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">The Institute of Bankers, Bangladesh (IBB)</h4>
+                                    <p class="text-muted mb-0">Diploma Associate of the Institute of Bankers, Bangladesh (DAIBB)</p>
+                                </div>
+                            </div>
+                            <p><strong>Graduation:</strong> 2004</p>
+                            <hr>
+                            <h5>Specialization:</h5>
+                            <ul>
+                                <li>Risk Management</li>
+                                <li>Trade Finance</li>
+                                <li>Fintech</li>
+                                <li>Compliance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Metropolia University -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/ibb-logo.jpg" alt="Metropolia" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">Obayed Ullah Memorial High School</h4>
+                                    <p class="text-muted mb-0">Junior Associate of The Institute of Bankers,, Bangladesh (JAIBB)</p>
+                                </div>
+                            </div>
+                            <p><strong>Graduation:</strong> 2004</p>
+                            <hr>
+                            <h5>Specialization:</h5>
+                            <ul>
+                                <li>Finance</li>
+                                <li>Banking Laws</li>
+                                <li>Economics</li>
+                                <li>Governance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <!-- Skills Section -->
+    <section id="skills-section" class="section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Technical Skills</h2>
+            
+            <div class="row">
+                <!-- Networking Skills -->
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Cisco Networking</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Network Security</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Firewall Configuration</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technical Skills -->
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Linux Administration</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Cloud Infrastructure</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python Scripting</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certifications -->
+            <!-- Certifications Section -->
+<div class="mt-5" data-aos="fade-up">
+    <h3 class="text-center mb-4">Certifications & Achievements</h3>
+    <div class="row">
+        <!-- Networking Certifications -->
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="p-3 border rounded hover-scale">
+                <i class="fas fa-network-wired fa-3x text-primary mb-3"></i>
+                <h5>CCNA Security</h5>
+                <p class="small text-muted">Oct 2017</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="p-3 border rounded hover-scale">
+                <i class="fas fa-server fa-3x text-primary mb-3"></i>
+                <h5>CCNA R&S (Full)</h5>
+                <p class="small text-muted">2017</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="p-3 border rounded hover-scale">
+                <i class="fas fa-wifi fa-3x text-primary mb-3"></i>
+                <h5>Networking Essentials</h5>
+                <p class="small text-muted">Nov 2021</p>
+            </div>
+        </div>
+
+        <!-- Security Certifications -->
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="p-3 border rounded hover-scale">
+                <i class="fas fa-user-secret fa-3x text-primary mb-3"></i>
+                <h5>Ethical Hacker</h5>
+                <p class="small text-muted">Dec 2024</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="p-3 border rounded hover-scale">
+                <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                <h5>Endpoint Security</h5>
+                <p class="small text-muted">Dec 2024</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="p-3 border rounded hover-scale">
+                <i class="fas fa-lock fa-3x text-primary mb-3"></i>
+                <h5>Introduction to Cybersecurity</h5>
+                <p class="small text-muted">2020</p>
+            </div>
+        </div>
+
+        <!-- Programming & Other -->
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="p-3 border rounded hover-scale">
+                <i class="fab fa-python fa-3x text-primary mb-3"></i>
+                <h5>PCAP Python</h5>
+                <p class="small text-muted">Mar 2021</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="p-3 border rounded hover-scale">
+                <i class="fas fa-cloud fa-3x text-primary mb-3"></i>
+                <h5>Introduction to IoT</h5>
+                <p class="small text-muted">May 2020</p>
+            </div>
         </div>
     </div>
 </div>
 
+<!-- Modules Section (Optional) -->
+<div class="mt-4" data-aos="fade-up">
+    <h4 class="text-center mb-3">Key Specialized Training Modules</h4>
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle text-success me-2"></i> Network Security Basics</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Social Engineering Attacks</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Cloud, Mobile & IoT Security</li>
+            </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+            <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle text-success me-2"></i> Vulnerability Scanning</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Python for Security</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Post-Exploitation Techniques</li>
+            </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+            <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle text-success me-2"></i> Wireless Network Exploitation</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Application Security</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Pentest Planning & Scoping</li>
+            </ul>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
 
-		 
-      <!--END PROJECT SECTION -->
-      <!--AWARDS & OTHERS SECTION -->
-      <div id="award-section" >
-      <div class="container" >
-      <div class="row main-top-margin text-center" data-scrollreveal="enter top and move 100px, wait 0.3s">
-         <div class="col-md-8 col-md-offset-2 ">
-            <h1>AWARDS & OTHERS</h1>
-            <!--<h4>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-               </h4> -->
-         </div>
-      </div>
-      <!-- ./ Main Heading-->
-      <hr />
-      <div class="row main-low-margin" >
-         <div class="col-md-10  col-md-offset-1 ">
-            <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.2s">
-               <h2 >  <strong class="color-blue">Awards<br />and<br />Scholarships</strong></h2>
-            </div>
-            <div class="col-md-8 text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
-               <p>
-               <p><i class="fa fa-check"></i> Vocational Scholarship form University of Development Alternative (2006-2009)<br /></p>
-               </p>
-            </div>
-         </div>
-      </div>
-      <!-- ./ Row Content-->
-      <hr />
-      <div class="row main-low-margin" >
-         <div class="col-md-10  col-md-offset-1 ">
-            <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.2s">
-               <h2 >  <strong class="color-blue">Contribution</strong></h2>
-            </div>
-            <div class="col-md-8 text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
-               <p>
-               <p><i class="fa fa-check"></i> <a href="https://r1unix.blogspot.com/"> R1 Server OS</a><br /></p>
-               </p>
-            </div>
-         </div>
-      </div>
-      <!-- ./ Row Content-->
-      <hr />
-      <div class="row main-low-margin" >
-         <div class="col-md-10  col-md-offset-1 ">
-            <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.2s">
-               <h2 >  <strong class="color-blue">Cocurricular<br/>Activities</strong></h2>
-            </div>
-            <div class="col-md-8 text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
-               <p>
-               <h4 >  <strong class="color-red">CSE Association, UODA</strong></h4>
-               <i class="fa fa-check"></i> Assistant General Secretary (2008)
-               </p>
-               <p>
-               <h4 >  <strong class="color-red">NACK (Network Acceleration Club of UODA)</strong></h4>
-               <i class="fa fa-check"></i> Organizing Secretary (2008)
-               <p><i class="fa fa-check"></i> Batch Representative (2009)</p>
-               </p>
-               <p>
-               <h4 >  <strong class="color-red">SAVE (Voluntary Blood Donation Society of UODA)</strong></h4>
-               <i class="fa fa-check"></i> Member (2006-2010) 
-               </p>
-            </div>
-         </div>
-      </div>
-      <!-- ./ Row Content-->
-      <hr />
-      <div class="row main-low-margin" >
-         <div class="col-md-10  col-md-offset-1 ">
-            <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.2s">
-               <h2 >  <strong class="color-blue">Licenses <br> and <br> Certifications</strong></h2>
-            </div>
-            <div class="col-md-8 text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
-               <p>
-               <p><i class="fa fa-check"></i>CIPS Ethics Exam</p>
-               <p><i class="fa fa-check"></i>Networking Basics</p>
-               <p><i class="fa fa-check"></i>CCNA Routing and Switching: Introduction to Networks, Routing and Switching Essentials, Scaling Network, Connecting Networks</p>
-               <p><i class="fa fa-check"></i>Network Security: Introduction to Cybersecurity, CCNA Security, Endpoint Security, Cyber Threat Management</p>
-               <p><i class="fa fa-check"></i>Introduction to IoT</p>
-               <p><i class="fa fa-check"></i>Introduction to Data Science</p>
-               <p><i class="fa fa-check"></i>NDG Linux Unhatched</p>
-               <p><i class="fa fa-check"></i>PCAP - Programming Essentials in Python</p>
-               <p><i class="fa fa-check"></i>NSE 1 and NSE 2 Network Security Associate</p>
-               <p><i class="fa fa-check"></i>CNSS Certified Network Security Specialist</p>
-               <p><i class="fa fa-check"></i>Autopsy Basics and Hands On (8-Hours)</p>
-               <p><i class="fa fa-check"></i>Cyber Security & IT Risk Management to Prevent & Mitigate possible Risk of Frauds and Pitfalls</p>
-               <p><i class="fa fa-check"></i>Real Life Network Implementation Based on Microsoft, Cisco and Linux</p>
-               <p><i class="fa fa-check"></i>Computer Management</p>
-               <p><i class="fa fa-check"></i>Banking Diploma JAIBB and </p>
-               </p>    
-            </div>
-         </div>
-      </div>
-      <!-- ./ Row Content-->
-      <hr />
-      <!--END AWARDS & OTHERS SECTION -->
-      <!--CONTACT SECTION -->
-      <div id="contact-section">
-         <div class="container" >
-            <div class="row main-top-margin text-center">
-               <div class="col-md-8 col-md-offset-2 " data-scrollreveal="enter top and move 100px, wait 0.3s">
-                  <h1>Contact Me</h1>
-                  <!--<h1>OTHERS | CONTACT</h1>
-                     <h4>
-                         You can have a look on my contribution to the following educational sites<br/>&<br/> Contact me using my Contact information
-                     </h4>-->
-               </div>
-            </div>
-            <hr />
-            <!-- ./ Main Heading-->
+    <!-- Projects Section -->
+    <section id="project-section" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Research & Projects</h2>
+            
             <div class="row">
-               <div class="col-md-12  col-sm-12 ">
-                  <div class="col-md-6  " data-scrollreveal="enter left and move 100px, wait 0.4s">
-                     <h3 style="text-align: center;">Address</h3>
-                     <hr />
-                     <p style="text-align: center;">
-                        Kabir Pur, Ward No-02, Pak Kishoreganj-3804<br />
-                        Sudharam, Noakhali (Bangladesh)<br />                          
-                        Contact No: +8801836002100<br />
-                        Email: almoshiurcse@gmail.com<br />
-                     </p>
-                  </div>
-                  <!-- 
-                     <div class="col-md-6  " data-scrollreveal="enter right and move 100px, wait 0.4s">
-                     
-                         <h3>Drop a Line or Hire Me </h3>
-                         <hr />
-                         <form>
-                             <div class="row">
-                                 <div class="col-md-6 ">
-                                     <div class="form-group">
-                                         <input type="text" class="form-control" required="required" placeholder="Name">
-                                     </div>
-                                 </div>
-                                 <div class="col-md-6">
-                                     <div class="form-group">
-                                         <input type="text" class="form-control" required="required" placeholder="Email address">
-                                     </div>
-                                 </div>
-                             </div>
-                               <div class="row">
-                                 <div class="col-md-6 ">
-                                     <div class="form-group">
-                                         <input type="text" class="form-control" required="required" placeholder="Subject">
-                                     </div>
-                                 </div>
-                                 <div class="col-md-6 ">
-                                     <div class="form-group">
-                                         <input type="text" class="form-control"  placeholder="Ref. (IF any)">
-                                     </div>
-                                 </div>
-                             </div>
-                             <div class="row">
-                                 <div class="col-md-12 ">
-                                     <div class="form-group">
-                                         <textarea name="message" id="message" required="required" class="form-control" rows="3"  placeholder="Message"></textarea>
-                                     </div>
-                                     <div class="form-group">
-                                         <button type="submit" class="btn btn-primary">Submit Request</button>
-                                     </div>
-                                 </div>
-                             </div>
-                         </form>
-                     
-                     </div>
-                     --> 
-                  <div class="col-md-6  " data-scrollreveal="enter right and move 100px, wait 0.4s">
-                     <h3 style="text-align: center;">Workplace</h3>
-                     <hr />
-                     <p style="text-align: center;">
-                        ICTD-Operation, Head Office<br />
-                        Janata Bank PLC<br />
-                        Motijheel, Dhaka-1000<br />  
-                        Email: almoshiur@janatabank-bd.com<br />                         
-                     </p>
-                  </div>
-               </div>
+                <!-- Project 1 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                    <i class="fas fa-wifi fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-0">Wi-Fi Network Solution</h4>
+                                    <p class="text-muted mb-0">Enterprise Network</p>
+                                </div>
+                            </div>
+                            <p>Implemented a Wi-Fi network solution utilizing Wi-Fi 802.11 b standards, supported by Windows Server for authentication and management.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-primary me-2">Windows Server</span>
+                                <span class="badge bg-primary">Batch Scripting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                    <i class="fas fa-server fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-0">Network Management Interface</h4>
+                                    <p class="text-muted mb-0">Centralized Management</p>
+                                </div>
+                            </div>
+                            <p>Developed a comprehensive server and network management interface using RHEL, Elastic, PHP MySQL, and Shell Script.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-primary me-2">RHEL</span>
+                                <span class="badge bg-primary me-2">PHP</span>
+                                <span class="badge bg-primary">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                    <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-0">Bank Network Security</h4>
+                                    <p class="text-muted mb-0">Financial Security</p>
+                                </div>
+                            </div>
+                            <p>Designed and implemented security measures for a 1000+ branch banking network, including DDoS prevention and firewall configurations.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-primary me-2">Cisco NGFW</span>
+                                <span class="badge bg-primary me-2">Fortinet</span>
+                                <span class="badge bg-primary">DDoS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                    <i class="fas fa-cloud fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-0">Cloud Migration</h4>
+                                    <p class="text-muted mb-0">Hybrid Cloud</p>
+                                </div>
+                            </div>
+                            <p>Led the migration of critical banking applications to a hybrid cloud environment, improving scalability and reliability.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-primary me-2">AWS</span>
+                                <span class="badge bg-primary me-2">Azure</span>
+                                <span class="badge bg-primary">Hybrid Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- ./ Row Content-->
-         </div>
-      </div>
-      <!--END CONTACT SECTION --> 
-      <!--FOOTER SECTION -->
-      <div id="footer">
-         <div class="container">
-            <div class="row ">
-               &copy; 2022 Md Al Moshiur Chowdhary | All Right Reserved 				
-            </div>
-         </div>
-      </div>
-      <!--END FOOTER SECTION --> 
-      <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
-      <!-- CORE JQUERY LIBRARY -->
-      <script src="assets/js/jquery.js"></script>
-      <!-- CORE BOOTSTRAP LIBRARY -->
-      <script src="assets/js/bootstrap.min.js"></script>
-      <!-- SCROLL REVEL LIBRARY FOR SCROLLING ANIMATIONS-->
-      <script src="assets/js/scrollReveal.js"></script>
-      <!-- CUSTOM SCRIPT-->
-      <script src="assets/js/custom.js"></script>
-   </body>
-</html>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact-section" class="section">
+        <div class="container">
+            <h2 class="section-title text-center text-white" data-aos="fade-up">Get In Touch</h2>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <h4>Location</h4>
+                        <p>Arentikuja, 0410<br>Helsinki<br>Finland</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="contact-info">
+                        <i class="fas fa-building contact-icon"></i>
+                        <h4>Last Workplace</h4>
+                        <p>ICTD-Operation, Head Office<br>Janata Bank PLC<br>Motijheel, Dhaka-1000, Bangladesh</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="contact-info">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <h4>Email</h4>
+                        <p>almoshiurcse@gmail.com<br>MdAlmoshiur.Chowdhary@metropolia.fi<br>almoshiur@janatabank-bd.com</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="contact-info">
+                        <i class="fas fa-phone-alt contact-icon"></i>
+                        <h4>Phone</h4>
+                        <p>+358 449272951</p>
+                        <div class="social-icons mt-3">
+                            <a href="https://www.facebook.com/sysengron/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://github.com/sysengron" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/amchowdhary/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-light btn-lg">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 Md Al Moshiur Chowdhary. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Navbar scroll effect
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('.navbar').addClass('scrolled');
+            } else {
+                $('.navbar').removeClass('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        $('a[href*="#"]').on('click', function(e) {
+            e.preventDefault();
+            
+            $('html, body').animate(
+                {
+                    scrollTop: $($(this).attr('href')).offset().top - 70,
+                },
+                500,
+                'linear'
+            );
+        });
+        
+        // Initialize particle.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+        
+        // Form validation
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+        
+        // Animate skill bars on scroll
+        $(window).scroll(function() {
+            var skillsOffset = $('#skills-section').offset().top;
+            var scrollPos = $(window).scrollTop() + $(window).height();
+            
+            if (scrollPos > skillsOffset) {
+                $('.skill-progress').each(function() {
+                    var width = $(this).data('width');
+                    $(this).css('width', width);
+                });
+            }
+        });
+        
+        // Set initial width for skill bars (from data-width attribute)
+        $(document).ready(function() {
+            $('.skill-progress').each(function() {
+                var width = $(this).parent().find('.skill-name span:last').text();
+                width = width.replace('%', '');
+                $(this).css('width', '0').data('width', width + '%');
+            });
+        });
+    </script>
+</body>
+</html>
