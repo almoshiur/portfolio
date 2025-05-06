@@ -1,0 +1,29 @@
+3_Foundation.pdf
+4_JBL (1).pdf
+4_JBL (2).pdf
+4_JBL (3).pdf
+4_JBL (4).pdf
+4_JBL (5).pdf
+7_NSE_1_Certification.pdf
+7_NSE_2_Certification.pdf
+8_CNSS Certified Network.pdf
+CCNA_R-S-_Connecting_Networks_certificate_syseng-ron-gmail-com_02dce6da-8d5b-4e27-8bef-cceb3b0cbe43.pdf
+CCNA_R-S-_Introduction_to_Networks_certificate_syseng-ron-gmail-com_d3b121d4-86ee-4ddd-8b56-94ec9e7c30a3.pdf
+CCNA_R-S-_Scaling_Networks_certificate_syseng-ron-gmail-com_ceae2968-8987-419c-a571-284da9468e07.pdf
+CCNA_Security_certificate_syseng-ron-gmail-com_726b2704-4c48-4f1d-851b-a9c5b36b921e.pdf
+CIPS.pdf
+Endpoint_Security_certificate_syseng-ron-gmail-com_ecbfc539-c06b-4ddd-a441-5afe4c6911b8.pdf
+Ethical_Hacker_certificate_syseng-ron-gmail-com_ec5b1876-18e0-449b-ad6e-579120e5aee1.pdf
+filelist.txt
+Introduction_to_Cybersecurity_certificate_syseng-ron-gmail-com_02542487-27b2-43af-955b-01c16cdcfd56.pdf
+Introduction_to_Cybersecurity_certificate_syseng-ron-gmail-com_9b3728b3-0f96-41db-bad0-543c5d0e98cc.pdf
+Introduction_to_Cybersecurity_certificate_syseng-ron-gmail-com_fb0e5db6-1472-40a2-9c82-5972a77d9a80.pdf
+Introduction_to_IoT_certificate_syseng-ron-gmail-com_aea0de86-5d1f-41c7-9ea6-1d823f550c0a.pdf
+Networking_Basics_certificate_syseng-ron-gmail-com_0b62369d-2f82-4c27-925e-60be2bec73b8.pdf
+Networking_Essentials_certificate_syseng-ron-gmail-com_5bb0c1b4-4d14-4cc7-8b2b-6dd3da35b914.pdf
+Partner-_NDG_Linux_Unhatched_certificate_syseng-ron-gmail-com_1d285d7a-72fb-4741-9fcf-2060a142866c.pdf
+Partner-_PCAP_-_Programming_Essentials_in_Python_certificate_syseng-ron-gmail-com_a2cf3555-2b91-4075-b5cd-67afad366c45.pdf
+RedHatEnterpriseLinuxAutomationwithAnsibleRH294-RHA-Ver.9.0_Badge20250506-26-gpd304.pdf
+RedHatSystemAdministrationIIRH134-RHA-Ver.9.3_Badge20250506-25-zv71mg.pdf
+RedHatSystemAdministrationIRH124-RHA-Ver.9.3_Badge20250506-27-51855a.pdf
+Training

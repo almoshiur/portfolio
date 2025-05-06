@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Professional portfolio of Md Al Moshiur Chowdhary - Network Engineer & Cybersecurity Specialist">
+    <meta name="author" content="Md Al Moshiur Chowdhary">
+    <title>Md Al Moshiur Chowdhary - Network & Security Expert</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            background-color: rgba(44, 62, 80, 0.95) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            padding: 15px 0;
+        }
+        
+        .navbar.scrolled {
+            padding: 10px 0;
+            background-color: var(--secondary-color) !important;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white !important;
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        #header-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #header-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80') center/cover;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        #header-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        #header-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        #header-section h3 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+        
+        .down-icon {
+            color: white;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .down-icon:hover {
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            bottom: -10px;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        /* About Section */
+        #about-section {
+            background-color: white;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-color);
+            color: white !important;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        /* Experience Section */
+        #wexp-section {
+            background-color: var(--light-color);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::after {
+            right: -12px;
+        }
+        
+        .right::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .timeline-date {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        /* Skills Section */
+        .skill-item {
+            margin-bottom: 30px;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 5px;
+            transition: width 1.5s ease;
+        }
+        
+        /* Contact Section */
+        #contact-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--dark-color) 100%);
+            color: white;
+        }
+        
+        .contact-info {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .contact-info:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        /* Footer */
+        #footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 18px;
+            }
+            
+            .left::after, .right::after {
+                left: 18px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+        }
+        
+        /* Animation Classes */
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        
+        .shadow-hover {
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .shadow-hover:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+        }
+        
+        /* Particle JS Background */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .particles-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MD AL MOSHIUR CHOWDHARY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#wexp-section">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education-section">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills-section">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#project-section">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="header-section" class="d-flex align-items-center">
+        <div id="particles-js"></div>
+        <div class="container particles-content text-center">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="animate__animated animate__fadeInDown">Md Al Moshiur Chowdhary</h1>
+                <h3 class="animate__animated animate__fadeInDown animate__delay-1s">Network & Cybersecurity Enthusiast</h3>
+                <div class="mt-4 animate__animated animate__fadeIn animate__delay-2s">
+                    <a href="#about-section" class="btn btn-primary btn-lg me-2">Explore My Work</a>
+                    <a href="#contact-section" class="btn btn-outline-light btn-lg">Contact Me</a>
+                </div>
+                <a href="#about-section" class="d-block mt-5 animate__animated animate__fadeIn animate__delay-3s">
+                    <i class="fas fa-chevron-down fa-3x down-icon"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section" class="section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center" data-aos="fade-right">
+                    <img src="assets/img/team/rony.jpg" alt="Profile Image" class="profile-img img-fluid mb-4">
+                    <h3>Md Al Moshiur Chowdhary</h3>
+                    <p class="text-muted">Principal Officer, JB PLC</p>
+                    <div class="social-icons mt-3">
+                        <a href="https://www.facebook.com/sysengron/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/sysengron" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/amchowdhary/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <h3 class="mb-4">Network & Security Professional</h3>
+                    <p class="lead">With over 14 years of experience in designing, securing, and managing large-scale networks for major organizations.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> CISCO</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Network Architecture</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Network Security</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Linux</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Ethical Hacking</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Threat Management</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p class="mt-4">I'm currently pursuing a Master's in IT – Networking and Services at Metropolia University of Applied Sciences (Finland), focusing on advanced networking, cybersecurity, and AI-driven security.</p>
+                    
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-primary me-2"><i class="fas fa-download me-2"></i>Download CV</a>
+                        <a href="#contact-section" class="btn btn-outline-primary">Hire Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="wexp-section" class="section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Professional Experience</h2>
+            
+            <div class="timeline">
+                <!-- Janata Bank -->
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-content shadow-hover hover-scale">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/img/product/jb-logo.jpg" alt="Janata Bank" class="me-3" width="60">
+                            <div>
+                                <h4 class="mb-0">Janata Bank PLC</h4>
+                                <p class="text-muted mb-0">Principal Officer - ICT Division</p>
+                            </div>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar-alt me-2"></i>July 2012 - Present</span>
+                        <ul class="mt-3">
+                            <li>Design and implement secure network architectures for 1000+ branch banking network</li>
+                            <li>Manage security infrastructure including Cisco NGFW, Fortinet Firewalls, and ADCs</li>
+                            <li>Lead DDoS prevention strategies ensuring 99.99% network uptime</li>
+                            <li>Configure and maintain Cisco ASR, Nexus, and Mikrotik network devices</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Getco -->
+                <div class="timeline-item right" data-aos="fade-left">
+                    <div class="timeline-content shadow-hover hover-scale">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/img/product/daffodil-logo.png" alt="Getco" class="me-3" width="60">
+                            <div>
+                                <h4 class="mb-0">Getco</h4>
+                                <p class="text-muted mb-0">Senior Network Engineer</p>
+                            </div>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar-alt me-2"></i>January 2010 - July 2012</span>
+                        <ul class="mt-3">
+                            <li>Managed local and wide area networks for a leading ISP in Bangladesh</li>
+                            <li>Configured Cisco switches and routers (VLAN, VTP, STP, ACL, GRE, IPSec VPN)</li>
+                            <li>Implemented Mikrotik router configurations for optimal network performance</li>
+                            <li>Troubleshot network connectivity issues with 95% resolution rate</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Metronet -->
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-content shadow-hover hover-scale">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/img/product/daffodil-logo.png" alt="Metronet" class="me-3" width="60">
+                            <div>
+                                <h4 class="mb-0">Metronet</h4>
+                                <p class="text-muted mb-0">Senior Network Engineer</p>
+                            </div>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar-alt me-2"></i>January 2010 - July 2012</span>
+                        <ul class="mt-3">
+                            <li>Managed local and wide area networks for a leading ISP in Bangladesh</li>
+                            <li>Configured Cisco switches and routers (VLAN, VTP, STP, ACL, GRE, IPSec VPN)</li>
+                            <li>Implemented Mikrotik router configurations for optimal network performance</li>
+                            <li>Troubleshot network connectivity issues with 95% resolution rate</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Intech Limited -->
+                <div class="timeline-item right" data-aos="fade-left">
+                    <div class="timeline-content shadow-hover hover-scale">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/img/product/daffodil-logo.png" alt="Intech Limited" class="me-3" width="60">
+                            <div>
+                                <h4 class="mb-0">Intech Limited</h4>
+                                <p class="text-muted mb-0">Senior Network Engineer</p>
+                            </div>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar-alt me-2"></i>January 2010 - July 2012</span>
+                        <ul class="mt-3">
+                            <li>Managed local and wide area networks for a leading ISP in Bangladesh</li>
+                            <li>Configured Cisco switches and routers (VLAN, VTP, STP, ACL, GRE, IPSec VPN)</li>
+                            <li>Implemented Mikrotik router configurations for optimal network performance</li>
+                            <li>Troubleshot network connectivity issues with 95% resolution rate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education-section" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Education</h2>
+            
+            <div class="row">
+                <!-- Metro -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/mp-logo.jpg" alt="Metro" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">Metropolia University of Applied Sciences</h4>
+                                    <p class="text-muted mb-0">MSc in Information Technology (Networking and Services)</p>
+                                </div>
+                            </div>
+                            <p><strong>Graduation:</strong> 2009</p>
+                            <p><strong>CGPA:</strong> 3.47/4.00</p>
+                            <hr>
+                            <h5>Key Courses:</h5>
+                            <ul>
+                                <li>Computer Networks</li>
+                                <li>Computer and Network Security</li>
+                                <li>Data Structures & Algorithms</li>
+                                <li>Operating Systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- JU -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/JU-logo.png" alt="JU" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">Jahangirnagar University</h4>
+                                    <p class="text-muted mb-0">M.Sc. in Information Technology</p>
+                                </div>
+                            </div>
+                            <p><strong>Graduation:</strong> Ongoing</p>
+                            <hr>
+                            <h5>Focus Areas:</h5>
+                            <ul>
+                                <li>Advanced Networking</li>
+                                <li>Cybersecurity</li>
+                                <li>Cloud Computing</li>
+                                <li>Artificial Intelligence</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- UODA -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/kuet-logo.png" alt="UODA" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">University of Development Alternative</h4>
+                                    <p class="text-muted mb-0">B.Sc. in Computer Science and Engineering</p>
+                                </div>
+                            </div>
+                            <p><strong>Graduation:</strong> 2009</p>
+                            <p><strong>CGPA:</strong> 3.47/4.00</p>
+                            <hr>
+                            <h5>Key Courses:</h5>
+                            <ul>
+                                <li>Database Systems</li>
+                                <li>Software Engineering</li>
+                                <li>Data Mining</li>
+                                <li>Machine Learning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Metropolia University -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/brc-logo.png" alt="Metropolia" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">Bangladesh Rifles College</h4>
+                                    <p class="text-muted mb-0">Higher Secondary Certificate</p>
+                                </div>
+                            </div>
+                            <p><strong>Graduation:</strong> 2004</p>
+                            <hr>
+                            <h5>Specialization:</h5>
+                            <ul>
+                                <li>Network Security</li>
+                                <li>Cloud Services</li>
+                                <li>AI-driven Security</li>
+                                <li>Advanced Routing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Metropolia University -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/oms-logo.jfif" alt="Metropolia" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">Obayed Ullah Memorial High School</h4>
+                                    <p class="text-muted mb-0">Secondary School Certificate</p>
+                                </div>
+                            </div>
+                            <p><strong>Graduation:</strong> 2004</p>
+                            <hr>
+                            <h5>Specialization:</h5>
+                            <ul>
+                                <li>Network Security</li>
+                                <li>Cloud Services</li>
+                                <li>AI-driven Security</li>
+                                <li>Advanced Routing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Metropolia University -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/wes.png" alt="Metropolia" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">Educational Credential Evaluation (ECA)</h4>
+                                    <p class="text-muted mb-0">World Education Services</p>
+                                    
+                                </div>
+                            </div>
+                            <hr>
+                            <ul>
+                                <li>Course-by-Course Educational Credential Evaluation, Ref. #4620970</li>
+                                <li>Document-by-Document Educational Credential Evaluation, Ref. #4122304</li>                             
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Metropolia University -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/ibb-logo.jpg" alt="Metropolia" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">The Institute of Bankers, Bangladesh (IBB)</h4>
+                                    <p class="text-muted mb-0">Diploma Associate of the Institute of Bankers, Bangladesh (DAIBB)</p>
+                                </div>
+                            </div>
+                            <p><strong>Graduation:</strong> 2004</p>
+                            <hr>
+                            <h5>Specialization:</h5>
+                            <ul>
+                                <li>Risk Management</li>
+                                <li>Trade Finance</li>
+                                <li>Fintech</li>
+                                <li>Compliance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Metropolia University -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="assets/img/product/ibb-logo.jpg" alt="Metropolia" class="me-3" width="60">
+                                <div>
+                                    <h4 class="mb-0">Obayed Ullah Memorial High School</h4>
+                                    <p class="text-muted mb-0">Junior Associate of The Institute of Bankers,, Bangladesh (JAIBB)</p>
+                                </div>
+                            </div>
+                            <p><strong>Graduation:</strong> 2004</p>
+                            <hr>
+                            <h5>Specialization:</h5>
+                            <ul>
+                                <li>Finance</li>
+                                <li>Banking Laws</li>
+                                <li>Economics</li>
+                                <li>Governance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <!-- Skills Section -->
+    <section id="skills-section" class="section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Technical Skills</h2>
+            
+            <div class="row">
+                <!-- Networking Skills -->
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Cisco Networking</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Network Security</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Firewall Configuration</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technical Skills -->
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Linux Administration</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Cloud Infrastructure</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python Scripting</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+<div class="mt-5" data-aos="fade-up">
+    <h3 class="text-center mb-4">Certifications & Achievements</h3>
+
+    <!-- 1. Networking -->
+    <h4 class="mt-4 mb-3 border-bottom pb-2">Networking</h4>
+    <div class="row">
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/Networking_Basics_certificate_syseng-ron-gmail-com_0b62369d-2f82-4c27-925e-60be2bec73b8.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/Networking_Basics_certificate_syseng-ron-gmail-com_0b62369d-2f82-4c27-925e-60be2bec73b8.pdf', '_blank')">
+                <i class="fas fa-network-wired fa-3x text-primary mb-3"></i>
+                <h5>Networking Basics</h5>
+                <p class="small text-muted">Cisco</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/Networking_Essentials_certificate_syseng-ron-gmail-com_5bb0c1b4-4d14-4cc7-8b2b-6dd3da35b914.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/Networking_Essentials_certificate_syseng-ron-gmail-com_5bb0c1b4-4d14-4cc7-8b2b-6dd3da35b914.pdf', '_blank')">
+                <i class="fas fa-server fa-3x text-primary mb-3"></i>
+                <h5>Networking Essentials</h5>
+                <p class="small text-muted">Cisco</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Cisco Certifications -->
+    <h4 class="mt-4 mb-3 border-bottom pb-2">Cisco Certifications</h4>
+    <div class="row">
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/CCNA_R-S-_Introduction_to_Networks_certificate_syseng-ron-gmail-com_d3b121d4-86ee-4ddd-8b56-94ec9e7c30a3.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/CCNA_R-S-_Introduction_to_Networks_certificate_syseng-ron-gmail-com_d3b121d4-86ee-4ddd-8b56-94ec9e7c30a3.pdf', '_blank')">
+                <i class="fas fa-certificate fa-3x text-primary mb-3"></i>
+                <h5>CCNA: Intro to Networks</h5>
+                <p class="small text-muted">Cisco</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/CCNA_R-S-_Scaling_Networks_certificate_syseng-ron-gmail-com_ceae2968-8987-419c-a571-284da9468e07.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/CCNA_R-S-_Scaling_Networks_certificate_syseng-ron-gmail-com_ceae2968-8987-419c-a571-284da9468e07.pdf', '_blank')">
+                <i class="fas fa-expand fa-3x text-primary mb-3"></i>
+                <h5>CCNA: Scaling Networks</h5>
+                <p class="small text-muted">Cisco</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/CCNA_R-S-_Connecting_Networks_certificate_syseng-ron-gmail-com_02dce6da-8d5b-4e27-8bef-cceb3b0cbe43.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/CCNA_R-S-_Connecting_Networks_certificate_syseng-ron-gmail-com_02dce6da-8d5b-4e27-8bef-cceb3b0cbe43.pdf', '_blank')">
+                <i class="fas fa-plug fa-3x text-primary mb-3"></i>
+                <h5>CCNA: Connecting Networks</h5>
+                <p class="small text-muted">Cisco</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Security -->
+    <h4 class="mt-4 mb-3 border-bottom pb-2">Security</h4>
+    <div class="row">
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/CCNA_Security_certificate_syseng-ron-gmail-com_726b2704-4c48-4f1d-851b-a9c5b36b921e.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/CCNA_Security_certificate_syseng-ron-gmail-com_726b2704-4c48-4f1d-851b-a9c5b36b921e.pdf', '_blank')">
+                <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                <h5>CCNA Security</h5>
+                <p class="small text-muted">Cisco</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/Endpoint_Security_certificate_syseng-ron-gmail-com_ecbfc539-c06b-4ddd-a441-5afe4c6911b8.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/Endpoint_Security_certificate_syseng-ron-gmail-com_ecbfc539-c06b-4ddd-a441-5afe4c6911b8.pdf', '_blank')">
+                <i class="fas fa-lock fa-3x text-primary mb-3"></i>
+                <h5>Endpoint Security</h5>
+                <p class="small text-muted">Cisco</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/Ethical_Hacker_certificate_syseng-ron-gmail-com_ec5b1876-18e0-449b-ad6e-579120e5aee1.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/Ethical_Hacker_certificate_syseng-ron-gmail-com_ec5b1876-18e0-449b-ad6e-579120e5aee1.pdf', '_blank')">
+                <i class="fas fa-user-secret fa-3x text-primary mb-3"></i>
+                <h5>Ethical Hacker</h5>
+                <p class="small text-muted">EC-Council</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/7_NSE_1_Certification.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/7_NSE_1_Certification.pdf', '_blank')">
+                <i class="fas fa-fire fa-3x text-danger mb-3"></i>
+                <h5>NSE 1</h5>
+                <p class="small text-muted">Fortinet</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/7_NSE_2_Certification.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/7_NSE_2_Certification.pdf', '_blank')">
+                <i class="fas fa-fire fa-3x text-danger mb-3"></i>
+                <h5>NSE 2</h5>
+                <p class="small text-muted">Fortinet</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/8_CNSS_Certified_Network.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/8_CNSS_Certified_Network.pdf', '_blank')">
+                <i class="fas fa-user-shield fa-3x text-warning mb-3"></i>
+                <h5>CNSS Certified</h5>
+                <p class="small text-muted">Network Security</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Linux -->
+    <h4 class="mt-4 mb-3 border-bottom pb-2">Linux</h4>
+    <div class="row">
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/Partner-_NDG_Linux_Unhatched_certificate_syseng-ron-gmail-com_1d285d7a-72fb-4741-9fcf-2060a142866c.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/Partner-_NDG_Linux_Unhatched_certificate_syseng-ron-gmail-com_1d285d7a-72fb-4741-9fcf-2060a142866c.pdf', '_blank')">
+                <i class="fab fa-linux fa-3x text-success mb-3"></i>
+                <h5>Linux Unhatched</h5>
+                <p class="small text-muted">NDG</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/RedHatSystemAdministrationIRH124-RHA-Ver.9.3_Badge20250506-27-51855a.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/RedHatSystemAdministrationIRH124-RHA-Ver.9.3_Badge20250506-27-51855a.pdf', '_blank')">
+                <i class="fab fa-redhat fa-3x text-danger mb-3"></i>
+                <h5>Red Hat SysAdmin I</h5>
+                <p class="small text-muted">Red Hat</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/RedHatSystemAdministrationIIRH134-RHA-Ver.9.3_Badge20250506-25-zv71mg.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/RedHatSystemAdministrationIIRH134-RHA-Ver.9.3_Badge20250506-25-zv71mg.pdf', '_blank')">
+                <i class="fab fa-redhat fa-3x text-danger mb-3"></i>
+                <h5>Red Hat SysAdmin II</h5>
+                <p class="small text-muted">Red Hat</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/RedHatEnterpriseLinuxAutomationwithAnsibleRH294-RHA-Ver.9.0_Badge20250506-26-gpd304.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/RedHatEnterpriseLinuxAutomationwithAnsibleRH294-RHA-Ver.9.0_Badge20250506-26-gpd304.pdf', '_blank')">
+                <i class="fab fa-redhat fa-3x text-danger mb-3"></i>
+                <h5>Red Hat Ansible</h5>
+                <p class="small text-muted">Automation</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Programming & Others -->
+    <h4 class="mt-4 mb-3 border-bottom pb-2">Programming & IoT</h4>
+    <div class="row">
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/Partner-PCAP-_Programming_Essentials_in_Python_certificate_syseng-ron-gmail-com_a2cf3555-2b91-4075-b5cd-67afad366c45.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/Partner-PCAP-_Programming_Essentials_in_Python_certificate_syseng-ron-gmail-com_a2cf3555-2b91-4075-b5cd-67afad366c45.pdf', '_blank')">
+                <i class="fab fa-python fa-3x text-info mb-3"></i>
+                <h5>Python Essentials</h5>
+                <p class="small text-muted">PCAP</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/Introduction_to_IoT_certificate_syseng-ron-gmail-com_aea0de86-5d1f-41c7-9ea6-1d823f550c0a.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/Introduction_to_IoT_certificate_syseng-ron-gmail-com_aea0de86-5d1f-41c7-9ea6-1d823f550c0a.pdf', '_blank')">
+                <i class="fas fa-wifi fa-3x text-primary mb-3"></i>
+                <h5>Introduction to IoT</h5>
+                <p class="small text-muted">Cisco</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. Affiliations -->
+    <h4 class="mt-4 mb-3 border-bottom pb-2">Affiliations</h4>
+    <div class="row">
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale">
+                <i class="fas fa-university fa-3x text-warning mb-3"></i>
+                <h5>JAIBB</h5>
+                <p class="small text-muted">Banking</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale">
+                <i class="fas fa-university fa-3x text-warning mb-3"></i>
+                <h5>DAIBB</h5>
+                <p class="small text-muted">Banking</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale">
+                <i class="fas fa-laptop-code fa-3x text-info mb-3"></i>
+                <h5>BCS</h5>
+                <p class="small text-muted">British Computer Society</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 text-center">
+            <div class="certificate-box p-3 border rounded hover-scale"
+                 onmouseenter="showPdfPreview('assets/Certificate/CIPS.pdf', this)"
+                 onmouseleave="hidePdfPreview()"
+                 onclick="window.open('assets/Certificate/CIPS.pdf', '_blank')">
+                <i class="fas fa-file-contract fa-3x text-success mb-3"></i>
+                <h5>CIPS</h5>
+                <p class="small text-muted">Procurement</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PDF Preview Modal -->
+<div id="pdfPreview" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); z-index:1000; width:60vw; height:70vh; background:white; box-shadow:0 0 20px rgba(0,0,0,0.3); border-radius:8px; overflow:hidden;">
+    <div style="position:absolute; top:0; right:0; padding:10px;">
+        <button onclick="hidePdfPreview()" style="background:#f00; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer;">×</button>
+    </div>
+    <iframe id="pdfFrame" style="width:100%; height:100%; border:none;"></iframe>
+</div>
+
+<script>
+let previewTimeout;
+let activeElement = null;
+
+function showPdfPreview(pdfPath, element) {
+    // Clear any existing timeouts
+    clearTimeout(previewTimeout);
+    
+    // Hide previous preview if it's from a different element
+    if (activeElement && activeElement !== element) {
+        hidePdfPreview();
+    }
+    
+    // Set the active element
+    activeElement = element;
+    
+    // Show the preview after a short delay
+    previewTimeout = setTimeout(() => {
+        document.getElementById('pdfFrame').src = pdfPath;
+        document.getElementById('pdfPreview').style.display = 'block';
+    }, 300);
+}
+
+function hidePdfPreview() {
+    clearTimeout(previewTimeout);
+    document.getElementById('pdfPreview').style.display = 'none';
+    document.getElementById('pdfFrame').src = '';
+    activeElement = null;
+}
+
+// Close preview when clicking outside
+document.addEventListener('click', function(e) {
+    const preview = document.getElementById('pdfPreview');
+    if (!preview.contains(e.target) && !e.target.closest('.certificate-box')) {
+        hidePdfPreview();
+    }
+});
+</script>
+
+<style>
+.certificate-box {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+.certificate-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+</style>
+            
+            
+            
+            
+            
+<!-- Modules Section (Optional) -->
+<div class="mt-4" data-aos="fade-up">
+    <h4 class="text-center mb-3">Key Specialized Training Modules</h4>
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle text-success me-2"></i> Network Security Basics</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Social Engineering Attacks</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Cloud, Mobile & IoT Security</li>
+            </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+            <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle text-success me-2"></i> Vulnerability Scanning</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Python for Security</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Post-Exploitation Techniques</li>
+            </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+            <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle text-success me-2"></i> Wireless Network Exploitation</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Application Security</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Pentest Planning & Scoping</li>
+            </ul>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="project-section" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Research & Projects</h2>
+            
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                    <i class="fas fa-wifi fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-0">Wi-Fi Network Solution</h4>
+                                    <p class="text-muted mb-0">Enterprise Network</p>
+                                </div>
+                            </div>
+                            <p>Implemented a Wi-Fi network solution utilizing Wi-Fi 802.11 b standards, supported by Windows Server for authentication and management.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-primary me-2">Windows Server</span>
+                                <span class="badge bg-primary">Batch Scripting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                    <i class="fas fa-server fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-0">Network Management Interface</h4>
+                                    <p class="text-muted mb-0">Centralized Management</p>
+                                </div>
+                            </div>
+                            <p>Developed a comprehensive server and network management interface using RHEL, Elastic, PHP MySQL, and Shell Script.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-primary me-2">RHEL</span>
+                                <span class="badge bg-primary me-2">PHP</span>
+                                <span class="badge bg-primary">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                    <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-0">Bank Network Security</h4>
+                                    <p class="text-muted mb-0">Financial Security</p>
+                                </div>
+                            </div>
+                            <p>Designed and implemented security measures for a 1000+ branch banking network, including DDoS prevention and firewall configurations.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-primary me-2">Cisco NGFW</span>
+                                <span class="badge bg-primary me-2">Fortinet</span>
+                                <span class="badge bg-primary">DDoS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 shadow-hover hover-scale">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                    <i class="fas fa-cloud fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-0">Cloud Migration</h4>
+                                    <p class="text-muted mb-0">Hybrid Cloud</p>
+                                </div>
+                            </div>
+                            <p>Led the migration of critical banking applications to a hybrid cloud environment, improving scalability and reliability.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-primary me-2">AWS</span>
+                                <span class="badge bg-primary me-2">Azure</span>
+                                <span class="badge bg-primary">Hybrid Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="section">
+        <div class="container">
+            <h2 class="section-title text-center text-white" data-aos="fade-up">Get In Touch</h2>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <h4>Location</h4>
+                        <p>Arentikuja, 0410<br>Helsinki<br>Finland</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="contact-info">
+                        <i class="fas fa-building contact-icon"></i>
+                        <h4>Last Workplace</h4>
+                        <p>ICTD-Operation, Head Office<br>Janata Bank PLC<br>Motijheel, Dhaka-1000, Bangladesh</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="contact-info">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <h4>Email</h4>
+                        <p>almoshiurcse@gmail.com<br>MdAlmoshiur.Chowdhary@metropolia.fi<br>almoshiur@janatabank-bd.com</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="contact-info">
+                        <i class="fas fa-phone-alt contact-icon"></i>
+                        <h4>Phone</h4>
+                        <p>+358 449272951</p>
+                        <div class="social-icons mt-3">
+                            <a href="https://www.facebook.com/sysengron/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://github.com/sysengron" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/amchowdhary/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-light btn-lg">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 Md Al Moshiur Chowdhary. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Navbar scroll effect
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('.navbar').addClass('scrolled');
+            } else {
+                $('.navbar').removeClass('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        $('a[href*="#"]').on('click', function(e) {
+            e.preventDefault();
+            
+            $('html, body').animate(
+                {
+                    scrollTop: $($(this).attr('href')).offset().top - 70,
+                },
+                500,
+                'linear'
+            );
+        });
+        
+        // Initialize particle.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+        
+        // Form validation
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+        
+        // Animate skill bars on scroll
+        $(window).scroll(function() {
+            var skillsOffset = $('#skills-section').offset().top;
+            var scrollPos = $(window).scrollTop() + $(window).height();
+            
+            if (scrollPos > skillsOffset) {
+                $('.skill-progress').each(function() {
+                    var width = $(this).data('width');
+                    $(this).css('width', width);
+                });
+            }
+        });
+        
+        // Set initial width for skill bars (from data-width attribute)
+        $(document).ready(function() {
+            $('.skill-progress').each(function() {
+                var width = $(this).parent().find('.skill-name span:last').text();
+                width = width.replace('%', '');
+                $(this).css('width', '0').data('width', width + '%');
+            });
+        });
+    </script>
+</body>
+</html>
